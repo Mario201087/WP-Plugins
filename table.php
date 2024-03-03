@@ -3,7 +3,7 @@
 Plugin Name: Edamam Nutrition Plugin
 Description: A simple plugin to get nutritional information using the Edamam Food Database API.
 Version: 1.0
-Author: Your Name
+Author: Mariusz Ludwiczak
 */
 
 // Enqueue jQuery for AJAX
@@ -49,8 +49,8 @@ add_shortcode('edamam_nutrition_form', 'edamam_nutrition_form_shortcode');
 // AJAX handler to fetch nutritional information using Edamam API
 function edamam_get_nutritional_info() {
     $api_url = 'https://api.edamam.com/api/food-database/v2/parser';
-    $app_id = '8c157af1';
-    $api_key = 'f7df98ab71a2993d1c24aa2e13981313';
+    $app_id = '';//your api id
+    $api_key = '';// your api key
 
     $food_input = sanitize_text_field($_POST['foodInput']);
 
